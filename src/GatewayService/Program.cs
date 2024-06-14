@@ -19,7 +19,6 @@ var app = builder.Build();
 app.MapReverseProxy();
 
 app.UseAuthentication();
-
 app.UseAuthorization();
 
 app.Run();

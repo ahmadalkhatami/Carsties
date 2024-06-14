@@ -1,5 +1,4 @@
-﻿using System.Runtime.Intrinsics.Arm;
-using Duende.IdentityServer.Models;
+﻿using Duende.IdentityServer.Models;
 
 namespace IdentityService;
 
@@ -23,11 +22,10 @@ public static class Config
         {
             new Client
             {
-                //for dev configuration only
                 ClientId = "postman",
-                ClientName = "postman",
+                ClientName = "Postman",
                 AllowedScopes = {"openid", "profile", "auctionApp"},
-                RedirectUris = {"https://www.getpostman/oauth2/callback"},
+                RedirectUris = {"https://www.getpostman.com/oauth2/callback"},
                 ClientSecrets = new[] {new Secret("NotASecret".Sha256())},
                 AllowedGrantTypes = {GrantType.ResourceOwnerPassword}
             },
