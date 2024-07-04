@@ -22,7 +22,7 @@ services:
       - 5672:5672
       - 15672:15672
   auction-svc:
-    image: trycatchlearn/auction-svc:latest
+    image: Carstie/auction-svc:latest
     build:
       context: .
       dockerfile: src/AuctionService/Dockerfile
@@ -38,7 +38,7 @@ services:
       - postgres
       - rabbitmq
   search-svc:
-    image: trycatchlearn/search-svc:latest
+    image: Carstie/search-svc:latest
     build:
       context: .
       dockerfile: src/SearchService/Dockerfile
@@ -54,7 +54,7 @@ services:
       - mongodb
       - rabbitmq
   identity-svc:
-    image: trycatchlearn/identity-svc:latest
+    image: Carstie/identity-svc:latest
     build:
       context: .
       dockerfile: src/IdentityService/Dockerfile
@@ -67,7 +67,7 @@ services:
     depends_on:
       - postgres
   gateway-svc:
-    image: trycatchlearn/gateway-svc:latest
+    image: Carstie/gateway-svc:latest
     build:
       context: .
       dockerfile: src/GatewayService/Dockerfile
